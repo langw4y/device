@@ -27,8 +27,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
-TARGET_USES_AOSP_RECOVERY := true
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+TARGET_USES_AOSP_RECOVERY := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_QUICK_TAP := false
+EXTRA_UDFPS_ANIMATIONS := true
+IS_PHONE := true
 
 #
 # All components inherited here go to system_ext image
