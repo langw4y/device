@@ -30,10 +30,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_USES_AOSP_RECOVERY := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-TARGET_SUPPORTS_QUICK_TAP := false
-EXTRA_UDFPS_ANIMATIONS := true
 IS_PHONE := true
 
 #
