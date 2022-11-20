@@ -27,8 +27,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
+$(call inherit-product, vendor/proton/config/common.mk)
 TARGET_USES_AOSP_RECOVERY := true
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 #
 # All components inherited here go to system_ext image
