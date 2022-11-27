@@ -32,7 +32,6 @@ RICE_CHIPSET := "MT6768"
 RICE_MAINTAINER := "orkunergun"
 SUSHI_BOOTANIMATION := 1080
 TARGET_BUILD_GRAPHENEOS_CAMERA := true
-TARGET_CORE_GMS := true
 
 #
 # All components inherited here go to system_ext image
