@@ -27,8 +27,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
-TARGET_USES_AOSP_RECOVERY := true
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+RICE_CHIPSET := "MT6768"
+RICE_MAINTAINER := "orkunergun"
+SUSHI_BOOTANIMATION := 1080
+TARGET_BUILD_GRAPHENEOS_CAMERA := true
+TARGET_CORE_GMS := true
 
 #
 # All components inherited here go to system_ext image
@@ -38,7 +42,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := lava
-PRODUCT_NAME := aosp_lava
+PRODUCT_NAME := lineage_lava
 PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := xiaomi
 
